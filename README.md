@@ -102,6 +102,11 @@ An overview of all the art in the chicago museum
 - Rendering 
   The render function clears the gallery element, then loops through artworks and inserts each artwork’s htmlString into the page.
 
+## Data Attribution
+
+This project uses the [Art Institute of Chicago API](https://api.artic.edu/) to fetch data on artworks. The Art Institute of Chicago provides access to data about its collection, including information on artists, artwork titles, dates, origins, and departments.
+Data provided by the Art Institute of Chicago API may be subject to their terms of use. Please visit their [website](https://www.artic.edu/open-access/open-access-policy) for more information on data licensing and attribution requirements.
+Source: (https://chatgpt.com/share/6730b8aa-be14-8010-b109-c7f599571e3f)
 
 ## Sources
 
@@ -114,3 +119,4 @@ An overview of all the art in the chicago museum
 - [Conventions](https://standardjs.com/rules.html)
 - [Conventions](https://pimcore.com/docs/platform/Portal_Engine/Development_Documentation/Customize_Appearance/Frontend_Architecture/)
 - [Chatgpt.com](https://chatgpt.com/share/67110f21-ddd8-800d-a4b1-2c59ac5b2c8d) used in js > index.js
+- [Chatgpt.com](https://chatgpt.com/share/6730b8aa-be14-8010-b109-c7f599571e3f) used in README
