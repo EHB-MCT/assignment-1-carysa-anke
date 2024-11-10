@@ -1,3 +1,6 @@
+// The fetchData function calls the API, converts each artwork into an Artwork object and stores it in the artworks array
+// This file is used for everything that has to do with data sorting, filtering and rendering
+
 "use strict";
 
 import Artwork from "../classes/Artwork.js";
@@ -9,12 +12,8 @@ let artworkCount = 0;
 let selectedSort = "Date";
 let selectedFilter = "All";
 
-/**
- * description: api fetch
- *
- * params: title, display dates, place of origin, department title (genre), artist
- * returns: get a return of data from the fetch
- */
+// Fetches artwork data, creates Artwork instances, and stores them in the artworks array
+// Calls filter(), sort() and render() to display the artworks on the page
 function fetchData() {
 	fetch("https://api.artic.edu/api/v1/artworks")
 		.then((response) => response.json())
@@ -41,6 +40,7 @@ function filter() {
 	console.log("filtering");
 }
 
+// Clears existing content and inserts the HTML string for each artwork
 function render() {
 	document.getElementById("gallery").innerHTML = "";
 	artworks.forEach((artwork) => {

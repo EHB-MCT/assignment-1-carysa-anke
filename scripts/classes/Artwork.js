@@ -1,8 +1,9 @@
+// Each artwork from the API is turned into an Artwork object. Artwork info is stored in properties
+// HtmlString returns an HTML block to render each artwork
+
 "use strict";
 
-/**
- * 
- */
+// Represents an artwork with details: title, date, origin, genre, and artist
 export default class Artwork {
     constructor(title, dateDisplay, placeOfOrigin, genre, artist){
         this.title = title;
@@ -11,6 +12,7 @@ export default class Artwork {
         this.department_title = genre;
         this.artist_title = artist;
     }
+    // Generates an HTML string to render the artwork
     get htmlString() {
 		return `
         <div class="frame">
