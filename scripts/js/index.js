@@ -15,7 +15,7 @@ let selectedFilter = "All";
  * params: title, display dates, place of origin, department title (genre), artist
  * returns: get a return of data from the fetch
  */
-function init() {
+function fetchData() {
 	fetch("https://api.artic.edu/api/v1/artworks")
 		.then((response) => response.json())
 		.then((jsonData) => {
@@ -24,6 +24,8 @@ function init() {
 				artworks.push(artwork);
 				console.log(artworks);
 			});
+			filter();
+			sort();
 			render();
 		})
 		.catch((error) => {
@@ -46,4 +48,4 @@ function render() {
 	});
 }
 
-init();
+fetchData();

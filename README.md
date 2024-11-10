@@ -87,6 +87,20 @@ An overview of all the art in the chicago museum
     config.js: stores configuration settings, such as API URLs
     index.js: manages initialization, sorting, filtering, and rendering of artworks
 
+## Data flow
+
+- Data Retrieval
+  fetchData in api.js makes a request to the Art Institute of Chicago API and gets artwork data as JSON. If there’s a network issue, it throws an error
+- Data Modeling
+  Each artwork from the API is turned into an Artwork object, defined in Artwork.js. This class stores artwork info (like title, date, origin, genre, and artist) in properties. It also has a htmlString method that returns an HTML block to render each artwork.
+- Data Initialization and Storage
+  The fetchData function in index.js calls the API, converts each artwork into an Artwork object and stores it in the artworks array.
+  Arrays like filteredArtworks and sortedArtworks are also there to hold data when filtering or sorting is applied.
+- Data Manipulation
+  Sorting: The sort function will sort artworks based on the selected sort option.
+  Filtering: The filter function will filter artworks by the selected filter.
+- Rendering 
+  The render function clears the gallery element, then loops through artworks and inserts each artwork’s htmlString into the page.
 
 
 ## Sources
