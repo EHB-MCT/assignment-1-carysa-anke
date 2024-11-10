@@ -3,6 +3,11 @@
 import Artwork from "../classes/Artwork.js";
 
 let artworks = [];
+let filteredArtworks = [];
+let sortedArtworks = [];
+let artworkCount = 0;
+let selectedSort = "Date";
+let selectedFilter = "All";
 
 /**
  * description: api fetch
