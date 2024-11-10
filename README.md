@@ -64,12 +64,30 @@ An overview of all the art in the chicago museum
 
 ## Files breakdown
 
+- Assets
+  Make sure you put your file in the right location, for example: don't put a jpeg in the 'videos' folder
+  If a folder starts containing more than 20 items, create subfolders based on the page you are using it for
+  Source: (https://pimcore.com/docs/platform/Portal_Engine/Development_Documentation/Customize_Appearance/Frontend_Architecture/)
+
 - CSS
   master.css: css added to all pages for consistency
   reset.css: removes all css defaulted by browser
   media.css: mediaqueries
   index.css: page specific
   Source: (https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
+
+- Pages
+  All HTML pages apart from the index.html file belong in the 'pages' folder
+
+- Scripts
+  classes:
+    Artwork.js: this class simplifies managing artworks as objects
+  js:
+    api.js: handles API requests and retrieves artworks
+    config.js: stores configuration settings, such as API URLs
+    index.js: manages initialization, sorting, filtering, and rendering of artworks
+
+
 
 ## Sources
 
@@ -80,4 +98,5 @@ An overview of all the art in the chicago museum
 - [Conventions](https://stackoverflow.com/questions/2336302/single-huge-css-file-vs-multiple-smaller-specific-css-files)
 - [Conventions](https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/JavaScript)
 - [Conventions](https://standardjs.com/rules.html)
+- [Conventions](https://pimcore.com/docs/platform/Portal_Engine/Development_Documentation/Customize_Appearance/Frontend_Architecture/)
 - [Chatgpt.com](https://chatgpt.com/share/67110f21-ddd8-800d-a4b1-2c59ac5b2c8d) used in js > index.js
